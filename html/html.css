@@ -1,1 +1,584 @@
-/* Add CSS styles for the HTML format here */
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+    background: #333333;
+    width: 300px;
+    /* top: 188px; */
+    position: absolute;
+    bottom: 0px;
+    z-index: 5;
+    right: -300px;
+    display: none;
+}
+
+h1, h2, h3, h4, h5, h6, h7, p, li, section {
+    margin-bottom: 1em !important;
+}
+
+h1, h2, h3, h4, h5, h6, h7 {
+    margin-left: 10%;
+}
+
+aside h2 {
+    font-size: 1.5em;
+    text-align: left;
+    margin-bottom: 1em !important;
+}
+
+aside p, p, ul li, li, ol li, ol, ul, h1, h2, h3, h4, a, section a {
+    text-align: left;
+    z-index: 1;
+    margin-bottom: 1em;
+}
+
+p, ul li, ol li, aside p {
+    font-size: 1.2em;
+}
+
+section {
+    margin-top: 1em !important;
+}
+
+p, li, ul li, ol li {
+    /* text-align: left; */
+    line-height: 1.7em !important;
+    font-size: 1.3em;
+    margin-bottom: 1em;
+    /* max-width: 80%; */
+    margin: 0 auto;
+}
+
+figure {
+    background-color:#33333 !important;
+    max-width: 100%;
+}
+figure img {
+    border: 0px;
+}
+
+figcaption {
+    font-family: 'lato', 'Helvetica Neue', Helvetica, Arial, Sans-Serif !important;
+    font-style: italic;
+    font-size: 1em;
+    max-width: 700px;
+    margin: auto;
+ 
+}
+
+.content ol li, .content ul li {
+    margin-left: 2em;
+}
+
+.content p, .content ul, .content ol {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.container {
+    background: #ffffff;
+    /* overflow: hidden; */
+    display: block;
+    position: relative;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font: 14px/1 'Open Sans', sans-serif;
+  color: #555;
+  text-align: center;
+  background: #ffffff;
+}
+
+.title {
+  padding: 35px 0;
+  color: #999;
+  border-bottom: 1px solid #bbb;
+  background: #eee;
+}
+
+.title span {
+  display: block;
+  margin: 0 0 15px;
+  font-size: 30px;
+  color: #555;
+}
+
+.offcanvas {
+  padding: 35px;
+}
+
+.oc {
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #fff 0px, #fff 15px, #999 15px, #999 18px, #fff 18px, #fff 23px, #999 23px, #999 26px, #fff 26px, #fff 31px, #999 31px, #999 34px, #fff 34px, #fff 50px);
+  overflow: hidden;
+  position: fixed;
+  box-shadow: 0px 0px 6px #6B6969;
+  bottom: 25px;
+  right: 25px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.oc:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 15px;
+  height: 50px;
+  background: #fff;
+  box-shadow: 35px 0 0 #fff;
+}
+
+.oc:nth-child(2):after {
+  content: '';
+  position: absolute;
+  top: 23px;
+  left: 30px;
+  display: block;
+  width: 5px;
+  height: 3px;
+  background: #fff;
+  box-shadow: 0 8px 0 #fff, -5px 8px 0 #fff;
+}
+
+.oc:nth-child(3):after {
+  content: '';
+  position: absolute;
+  top: 23px;
+  left: 30px;
+  display: block;
+  width: 5px;
+  height: 3px;
+  background: #fff;
+}
+
+.oc:nth-child(4):after {
+  content: '';
+  position: absolute;
+  top: 23px;
+  left: 30px;
+  display: block;
+  width: 5px;
+  height: 3px;
+  background: #fff;
+  box-shadow: 0 -8px 0 #fff, -5px -8px 0 #fff;
+}
+
+.oc:nth-child(5):after {
+  content: '';
+  position: absolute;
+  top: 23px;
+  left: 15px;
+  display: block;
+  width: 3px;
+  height: 3px;
+  background: #fff;
+  box-shadow: 18px 0 0 #fff;
+}
+
+.oc:nth-child(6):after {
+  content: '';
+  position: absolute;
+  top: 23px;
+  left: 15px;
+  display: block;
+  width: 3px;
+  height: 3px;
+  background: #fff;
+  box-shadow: 0 8px 0 #fff, 3px 8px 0 #fff, 18px 0 0 #fff, 15px 8px 0 #fff, 18px 8px 0 #fff;
+}
+
+
+
+
+pre {
+  background-color:#333333;
+  overflow:auto;
+  margin:0 0 1em;
+  padding:.5em 1em;
+}
+
+pre code,
+pre .line-number {
+  /* Ukuran line-height antara teks di dalam tag <code> dan <span class="line-number"> harus sama! */
+  font: Monospace;
+  /* color:black; */
+  /* display:block; */
+  text-align: left;
+  font-size: .9em;
+  font-color: #333333;
+}
+
+pre .line-number {
+  float:left;
+  margin:0 1em 0 -1em;
+  /* border-right:1px solid; */
+  text-align:right;
+  background: #1995dc;
+  /* position: absolute; */
+  margin-top: -15px;
+  padding-top: 15px;
+  /* left: 0; */
+  padding: 15px 10px 15px 65px;
+  color: #33333;
+}
+
+pre .line-number span {
+  display:block;
+  padding:0 .5em 0 1em;
+  color: #33333;
+  font-family: 'courier', monospace;
+  font-size: .8em;
+}
+
+pre .cl {
+  display:block;
+  clear:both;
+}
+
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+    font-family: 'lato', 'Helvetica Neue', Helvetica, Arial, Sans-Serif !important;
+}
+
+
+body {
+    max-width: 9999999px;
+    
+    padding: 0;
+    margin: 0;
+}
+
+aside p {
+    margin-top: 25px;
+}
+
+.blue-thing {
+    position: absolute;
+    width: 100px;
+    height: 125px;
+    top: 0px;
+    background: #1995dc;
+    left: 0px;
+}
+
+p {
+    /* line-height: 1.5em; */
+    /* font-size: 1.2em; */
+    text-indent: 0px;
+}
+
+aside {
+    background-color: #f4f4f4;     border: 0;
+    padding: 25px 125px 25px 125px;
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+}
+
+pre {
+    display: block;
+    color: #ffffff;
+    background: #33333;
+    /* padding: 25px; */
+    /* max-width: 700px; */
+    margin: 25px auto;
+    font-size: 1.25em;
+    line-height: 2.25em;
+    position: relative;
+    text-align: left;
+    padding: 15px 0px 0px 0px;
+}
+
+aside p, p, ul li, li, ol li, ol, ul, h1, h2, h3, h4, a, section a {
+    font-family: 'lato', 'Helvetica Neue', Helvetica, Arial, Sans-Serif !important;
+    line-height: 1.5em;
+    /* font-size: 1.2em; */
+    margin-top: 0px;
+}
+
+.content li {
+    margin-left: 3em;
+}
+
+.content ul {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+nav ol li ul {
+    margin: 10px 0px 10px 38px;
+}
+
+nav ol {
+    position: absolute;
+    width: 100%;
+    margin: 15px 15px 15px 38px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+nav ol li a {
+    text-decoration:none;
+    color: #ffffff;
+    /* font-weight: 600; */
+}
+
+nav ol li {
+    list-style-type: none;
+}
+
+nav ol > li:before {
+    content: counter(customlistcounter) ":";   font-weight: bold;   float: left;   
+    width: 21px;
+}
+
+nav ol li {
+    counter-increment: customlistcounter;
+}
+
+nav ol li ul li {
+    font-size: 1em;
+    list-style-type: none;
+    margin-left: 0px;
+}
+
+.header-inside {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+footer {
+    width: 100%;
+    display: block;
+    padding: 25px;
+    background: #1995dc;
+    color: #ffffff;
+    font-weight: 300;
+    text-align: center;
+}
+header h1 {
+    font-size: 2em;
+    margin-bottom: 0.2em !important;
+}
+header h3 {
+    font-size: 1.6em;
+    font-weight: 400;
+}
+.dynamic-text {
+    /* float: left; */
+    /* width: 1050px; */
+}
+.logo-container {
+    /* float: left; */
+    display: inline-block;
+    width: 150px;
+    background: url('https://www.mapr.com/sites/default/files/mapr-logo-r.png') no-repeat center #c60c30;
+    padding: 26px;
+    background-size: 90%;
+    vertical-align: middle;
+    margin-right: 19px;
+}
+.title-container {
+    overflow: hidden;
+    /* float: left; */
+    display: inline-block;
+    vertical-align: middle;
+    width: 600px;
+}
+.content {}
+
+header {
+    background: #1995dc;
+    padding: 30px;
+    /* overflow: hidden; */
+    position: relative;
+    color: #ffffff;
+    display: block;
+}
+.container {
+    /* max-width: 1500px; */
+    margin: 0 auto;
+    position: relative;
+}
+sidebar {
+    /* background: #1995dc; */
+    /* position: fixed; */
+    /* display: inline-block; */
+    /* padding: 25px; */
+    /* left: 50px; */
+    float: left;
+    /* margin: 25px 25px 100px 0px; */
+    /* top: 150px; */
+    float: left;
+    width: 150px;
+    height: 1000px;
+    display: block;
+    position: relative;
+    /* padding-top: 74px; */
+    display: block;
+}
+sidebar nav {
+    background: #1995dc;     
+    position: fixed;     
+    /* display: inline-block; */     padding: 25px;
+    width: 130px;
+    top: 268px;
+}
+sidebar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size:  .75em !important;
+}
+
+section a {
+    color: #1995dc;
+}
+
+sidebar ul li a:hover {
+    text-decoration: underline;
+}
+
+sidebar ul li {}
+
+sidebar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+section[data-type="chapter"] {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+section[data-type="chapter"] section {
+    /* max-width: 1000px; */
+    margin: 0 auto;
+}
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    clear: both;
+    overflow: hidden;
+    /* background: #f4f4f4; */
+}
+
+div.navigation {}
+
+div.navigation ul {
+    list-style-type: none;
+}
+div.navigation ul li:first-child {
+    float: left;
+}
+
+div.navigation ul li a {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: none;
+    text-decoration: none;
+    color: #3a3938;
+}
+
+div.navigation ul li a::after {
+    height: 4px;
+    width: 109%;
+    content: ' ';
+    background: #1995dc;
+    display: block;
+    border-radius: 2px;
+}
+
+div.navigation ul li:last-child {
+    float: right;
+}
+section[data-type="chapter"] img {
+    max-width:700px;
+}
+
+nav ol li ol {
+
+list-style-type: none;
+
+position: relative !important;
+
+margin-bottom: 0px;
+}
+
+nav ol li {
+    margin-bottom: 0px !important;
+}
+
+nav {
+    overflow: hidden;
+}
+
+nav ol li ol li {
+    line-height: 0 !important;
+    height: auto !important;
+    padding: 0;
+    margin-bottom: 0px !important;
+    max-width: 200px;
+    margin-left: 0px !important;
+}
+
+nav ol li ol li a {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px !important;
+    transition: all .25s ease-in-out;
+}
+
+nav ol li ol li a:hover {
+    text-decoration: underline;
+}
+
+nav ol > li::before {
+    display: none !important;
+}
+
+nav ol li ol li a::before {
+    display: none;
+    content: '';
+}
