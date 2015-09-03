@@ -55,7 +55,7 @@ $( "nav > ol > li > a" ).each(function() {
     else {
       var finalNumber = parseFloat(xdf).toFixed(1);
     }
-    if (finalNumber != null) {
+    if (finalNumber != null && isNaN(finalNumber) == false) {
       $(this).parent('li').attr("chapter-number", finalNumber);
       $(this).parent('li').prepend(finalNumber + ": ");
     }
