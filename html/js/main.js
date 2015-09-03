@@ -45,19 +45,20 @@ if (chapter != null) {
 }
 
 $( "nav > ol > li > a" ).each(function() {
-    var z = $(this).attr("href");
-   var xdf = z.match(/[0-9]+/);
+  var z = $(this).attr("href");
+   var xdf = z.match(/[1-9]+/);
 
     if (Math.floor(xdf) == Math.floor($(this).parent('li').prev('li').attr("chapter-number"))) {
       var finalNumber = 0.1 + parseFloat($(this).parent('li').prev('li').attr("chapter-number"));
       var finalNumber = Number((finalNumber).toFixed(1));
     }
     else {
-      var finalNumber = xdf;
+      var finalNumber = parseFloat(xdf).toFixed(1);
     }
-
-    $(this).parent('li').attr("chapter-number", finalNumber);
-    $(this).parent('li').prepend(finalNumber + ": ");
+    if (finalNumber != null) {
+      $(this).parent('li').attr("chapter-number", finalNumber);
+      $(this).parent('li').prepend(finalNumber + ": ");
+    }
 
 });
 
