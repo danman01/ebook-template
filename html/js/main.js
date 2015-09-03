@@ -46,8 +46,7 @@ if (chapter != null) {
 
 $( "nav > ol > li > a" ).each(function() {
     var z = $(this).attr("href");
-    var sss = z.split('chapter0')[1];
-    var xdf = sss.split('-')[0];
+   var xdf = z.match(/[0-9]+/);
 
     if (Math.floor(xdf) == Math.floor($(this).parent('li').prev('li').attr("chapter-number"))) {
       var finalNumber = 0.1 + parseFloat($(this).parent('li').prev('li').attr("chapter-number"));

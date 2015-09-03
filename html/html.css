@@ -908,8 +908,10 @@ table {
 }
 
 section table {
-    max-width: 700px;
+    max-width: 600px;
     margin: 25px auto;
+    width: 100%;
+    text-align: left;
 }
 
 table caption {
@@ -967,6 +969,12 @@ figure {
     padding:0;
     display:block;
     page-break-inside:avoid
+;
+
+    max-width: 600px !important;
+
+    margin: 0 auto;
+
 }
 
 figure img {
@@ -1456,10 +1464,10 @@ pre .line-number {
     text-align:right;
     background:#1995dc;
     /* position: absolute; */
-    margin-top:-15px;
-    padding-top:15px;
+    margin-top: -17px;
+    padding-top: 15px;
     /* left: 0; */
-    padding: 18px 10px 15px 65px;
+    padding: 18px 10px 5px 65px;
     color:#33333
 
 
@@ -1471,7 +1479,7 @@ pre .line-number span {
     padding:0 .5em 0 1em;
     color: #000;
     font-family:'courier',monospace;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 pre .cl {
@@ -1549,11 +1557,11 @@ pre {
     /* padding: 25px; */
     /* max-width: 700px; */
     margin:25px auto;
-    font-size: 20px;
+    font-size: 16px;
     line-height:2.25em;
     position:relative;
     text-align:left;
-    padding: 6px 0 0;
+    padding: 5px 0 0;
     max-width: 1000px !important;
 }
 
@@ -1570,8 +1578,9 @@ aside .aside-subtitle, aside h3 {
     text-indent: 0 !important;
 }
 
-.content li {
-    margin-left:3em
+.content .dynamic-text section li {
+    margin-left: 25px;
+    margin-bottom: 6px !important;
 }
 
 .content ul, .content ol {
@@ -1794,8 +1803,7 @@ sidebar ul li a {
 }
 
 section a {
-    color:#1995dc
-}
+    color: #137fbc;}
 
 sidebar ul li a:hover {
     text-decoration:underline
@@ -1912,6 +1920,8 @@ nav ol li ol li a::before {
     display:none;
     content:''
 }
+
+/* Add your custom CSS styles for the HTML here */
 
 /* Add your custom CSS styles for the HTML here */
 
