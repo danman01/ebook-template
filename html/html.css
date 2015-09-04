@@ -75,13 +75,6 @@ section[data-type="copyright-page"] p {
     margin: 0;
     text-indent: 0
 }
-section[data-type="dedication"] {
-    font-family: serif;
-    font-style: italic;
-    page-break-after: always;
-    text-align: center;
-    padding-top: 100px
-}
 nav[data-type="toc"] a {
     font-style: normal
 }
@@ -550,13 +543,6 @@ section[data-type="copyright-page"] p {
     font-size: .8em;
     margin: 0;
     text-indent: 0
-}
-section[data-type="dedication"] {
-    font-family: serif;
-    font-style: italic;
-    page-break-after: always;
-    text-align: center;
-    padding-top: 100px
 }
 nav[data-type="toc"] a {
     font-style: normal
@@ -1501,3 +1487,17 @@ nav ol li ol li a::before {
     display: none;
     content: ''
 }
+
+section[data-type="dedication"] {
+    page-break-after: always;
+    font-style: italic;
+    padding-top: 70px
+}
+section[data-type="dedication"] > p > img {
+    float: right;
+    margin: 7px 10px 5px 10px;
+	overflow: auto;
+	border-style: ridge;
+	border-width: 7px;
+}
+
