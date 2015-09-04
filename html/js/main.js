@@ -104,13 +104,17 @@ $('nav ol li').not(dft).addClass('not-active');
 
 //activates the side nav!
 $('nav').attr("id", "sidr");
-//If cookie isn't present, go to register page. When redirect, set that cookie so you don't redirect again.
-var username=getCookie("visited");
-    if (username=="") {
-        console.log("not set");
-        setCookie("visited", "yes", 999);
-        window.location.replace("https://www.mapr.com/getting-started-apache-spark");
-    } 
+	// If the origin is local file system, we can't cookie and are likely in testing mode
+	var isLive=document.location.origin != "file://"
+	if (isLive==true) {
+		//If cookie isn't present, go to register page. When redirect, set that cookie so you don't redirect again.
+		var username=getCookie("visited");
+		if (username=="") {
+			console.log("not set");
+			setCookie("visited", "yes", 999);
+			window.location.replace("https://www.mapr.com/getting-started-apache-spark");
+	    } 
+	}
 
   navTop();
   $('#menu-button').sidr({
