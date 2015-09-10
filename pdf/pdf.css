@@ -722,7 +722,7 @@ div[data-type="part"] > h1:before {
   }
 }
 
-@page chapter:left {
+@page chapter:left, section[data-type="sect1"]:left {
   @bottom-left-corner {
     content: counter(page);
   }
@@ -731,7 +731,7 @@ div[data-type="part"] > h1:before {
   }
 }
 
-@page chapter:right {
+@page chapter:right, section[data-type="sect1"]:right {
   @bottom-right-corner {
     content: counter(page);
   }
