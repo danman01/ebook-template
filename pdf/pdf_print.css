@@ -11,3 +11,17 @@
 body[data-type="book"] > figure[data-type="cover"] { display: none }
 
 figure[data-type="cover"] { page: blank }
+
+/* Inherit link styling */
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: inherit;
+    text-decoration: inherit;
+    font-weight: inherit;
+}
+
+/* Show href after link */
+a:link:after, a:visited:after { content:" [" attr(href) "] "; }
