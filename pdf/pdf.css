@@ -213,13 +213,18 @@ section[data-type="copyright-page"] p.isbn {
 /* -------------------------------------------------------------- */
 
 section[data-type="dedication"] {
-  font-family: 'Crimson-Italic', serif, ArialUnicodeMS;
-  font-style: italic;
-  page: blank;
   page-break-after: always;
-  text-align: center;
-  padding-top: 96pt;
+  font-style: italic;
+  padding-top: 70px
 }
+section[data-type="dedication"] > p > img {
+  float: right;
+  margin: 7px 10px 5px 10px;
+  overflow: auto;
+  border-style: ridge;
+  border-width: 7px;
+}
+
 
 /* -------------------------------------------------------------- */
 /* --------------------------- Praise ----------------------------*/
