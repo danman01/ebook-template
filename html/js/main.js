@@ -41,7 +41,7 @@ function getCookie(cname) {
 var chapter = $('.content h1:nth-of-type(1)').html();
 if (chapter != null) { 
   $('.title-container').append('<h2>' + chapter + '</h2>'); 
-  document.title = document.title + " | " + chapter;
+  document.title = chapter + " | MapR";
 }
 
 $( "nav > ol > li > a" ).each(function() {
