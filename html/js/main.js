@@ -39,9 +39,17 @@ function getCookie(cname) {
 
 //In get chapter title on top in a dumb way, I know.
 var chapter = $('.content h1:nth-of-type(1)').html();
-if (chapter != null) { 
-  $('.title-container').append('<h2>' + chapter + '</h2>'); 
-  document.title = chapter + " | MapR";
+var subchapter = $('.content aside:nth-of-type(1) h2:nth-of-type(1)').html();
+var heading;
+if (chapter != null) {
+	heading = chapter;
+}
+else if (subchapter != null) {
+	heading = subchapter;
+}
+if (heading != null) {
+	$('.title-container').append('<h2>' + heading + '</h2>'); 
+	document.title = heading + " | MapR";
 }
 
 $( "nav > ol > li > a" ).each(function() {
