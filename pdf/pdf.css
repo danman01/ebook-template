@@ -213,18 +213,13 @@ section[data-type="copyright-page"] p.isbn {
 /* -------------------------------------------------------------- */
 
 section[data-type="dedication"] {
-  page-break-after: always;
+  font-family: 'Crimson-Italic', serif, ArialUnicodeMS;
   font-style: italic;
-  padding-top: 70px
+  page: blank;
+  page-break-after: always;
+  text-align: center;
+  padding-top: 96pt;
 }
-section[data-type="dedication"] > p > img {
-  float: right;
-  margin: 7px 10px 5px 10px;
-  overflow: auto;
-  border-style: ridge;
-  border-width: 7px;
-}
-
 
 /* -------------------------------------------------------------- */
 /* --------------------------- Praise ----------------------------*/
@@ -722,7 +717,7 @@ div[data-type="part"] > h1:before {
   }
 }
 
-@page chapter:left, section[data-type="sect1"]:left {
+@page chapter:left {
   @bottom-left-corner {
     content: counter(page);
   }
@@ -731,7 +726,7 @@ div[data-type="part"] > h1:before {
   }
 }
 
-@page chapter:right, section[data-type="sect1"]:right {
+@page chapter:right {
   @bottom-right-corner {
     content: counter(page);
   }
