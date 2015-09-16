@@ -420,11 +420,11 @@ nav ol li.not-active ol {
     display: none
 }
 nav[data-type="toc"] ol li a {
-    font-size: 16px
+    font-size: 15px;
 }
 nav[data-type="toc"] ol>li {
     font-weight: 400;
-    font-size: 16px
+    font-size: 15px;
 }
 nav[data-type="toc"]>ol>li::before {
     display: none!important
