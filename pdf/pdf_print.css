@@ -2,7 +2,8 @@
 
 /* Set bleed/crop marks */
 @page {
-	bleed: 9pt;
+    size: 6in 9in;
+    bleed: 9pt;
 	marks: crop;
 	-ah-printer-marks-line-color: rgb-icc(#Grayscale, 0);
 }
@@ -22,6 +23,3 @@ a:active {
     text-decoration: inherit;
     font-weight: inherit;
 }
-
-/* Show href after link */
-a:link:after, a:visited:after { content:" [" attr(href) "] "; }
