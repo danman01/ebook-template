@@ -2,7 +2,8 @@
 
 /* Set bleed/crop marks */
 @page {
-	bleed: 9pt;
+    size: 6in 9in;
+    bleed: 9pt;
 	marks: crop;
 	-ah-printer-marks-line-color: rgb-icc(#Grayscale, 0);
 }
@@ -11,3 +12,14 @@
 body[data-type="book"] > figure[data-type="cover"] { display: none }
 
 figure[data-type="cover"] { page: blank }
+
+/* Inherit link styling */
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+    color: inherit;
+    text-decoration: inherit;
+    font-weight: inherit;
+}
