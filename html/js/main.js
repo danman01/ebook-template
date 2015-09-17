@@ -128,6 +128,9 @@ if (isLive==true) {
 // run navTop
 navTop();
 
+// catch window resize events and ensure the sidebar is still displaying appropriately
+$( window ).resize(function() {navTop();});
+
 $('#menu-button').sidr({
     side: 'right',
     body: '.content',
