@@ -75,6 +75,13 @@ section[data-type="copyright-page"] p {
     margin: 0;
     text-indent: 0
 }
+nav[data-type="toc"] ol li[data-type="chapter"] {
+  margin-top: 10px;
+}
+
+nav[data-type="toc"] ol li a, nav[data-type="toc"] ol>li, nav[data-type="toc"] ol li {
+  font-size: 1em;
+}
 nav[data-type="toc"] a {
     font-style: normal
 }
