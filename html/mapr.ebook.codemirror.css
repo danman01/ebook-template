@@ -1,0 +1,44 @@
+/* Thebe formatting */
+.thebe_wrap { max-width: 800px !important; box-sizing: padding-box; margin: auto; }
+.thebe_controls { position: relative; bottom: 0; text-align: right; z-index: 100; pointer-events: none; margin: -3.1875rem 0 0; padding-bottom: 15px; }
+.thebe_controls button { pointer-events: initial; margin: .45rem .625rem .625rem 0; background-color: #a1a1a1; color: #fff; outline: 0; padding: .5rem 1.25rem .5rem; border-style: outset; cursor: pointer; }
+.code_cell .thebe_controls { position: relative;bottom: 0; text-align: right; z-index: 100; pointer-events: none; margin: -3.1875rem 0 0; }
+.code_cell .output_wrapper .output_prompt { display: none; }
+.code_cell .output_wrapper { position: relative; }
+.code_cell .output_wrapper .output_result { padding: .625rem 1.25rem 1.25rem; }
+.output_wrapper { background-color: #f5f5f5; }
+.output_wrapper .output_subarea { padding-bottom: 2.5rem; }
+.code_cell .output_wrapper pre { line-height: 1.6em; color: #626262; background-color: #f5f5f5; margin: 0; float: none; }
+
+/* Top Level CodeMirror CSS */
+.CodeMirror { background-color: #3c3c3c !important; color: #ffffec !important; }
+.CodeMirror-selected { background-color: #716C62; }
+.CodeMirror-code { line-height: 1.7em; !important; display: block; padding: 5px 0 5px 10px; }
+.CodeMirror-matchingtag { background: rgba(255, 255, 255, .37); }
+.CodeMirror-activeline-background { background-color: #343600; }
+.CodeMirror-matchingbracket { text-decoration: underline; color: white !important; }
+
+/* Gutter Formatting */
+.CodeMirror-gutters { white-space: nowrap;  border-right: 0px !important; }
+.CodeMirror-gutter { background-color: #1995dc !important; -moz-box-sizing:content-box; box-sizing:content-box; display:inline-block; margin-bottom:-30px; *zoom:1; *display:inline}
+.CodeMirror-guttermarker { color: #f2777a; }
+.CodeMirror-guttermarker-subtle { color: #777; }
+.CodeMirror-gutter-wrapper { position: absolute; z-index:4; height:100%; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; padding-right: 20px !important; }
+.CodeMirror-linenumber { color: #3c3c3c !important;  }
+
+/* Syntax coloring */
+.cm-comment { color: #d27b53; }
+.cm-atom { color: #a16a94; }
+.cm-number { color: #a16a94; }
+.cm-property { color: #99cc99; }
+.cm-attribute { color: #99cc99; }
+.cm-keyword { color: #f2777a; }
+.cm-string { color: #ffcc66; }
+.cm-variable { color: #99cc99; }
+.cm-variable-2 { color: #6699cc; }
+.cm-def { color: #f99157; }
+.cm-bracket { color: #CCCCCC; }
+.cm-tag { color: #f2777a; }
+.cm-link { color: #a16a94; }
+

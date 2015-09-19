@@ -90,18 +90,6 @@ if (target.length) {
 //This labels p tags in asides, in case people use those instad of h3 or something else b4 the h2
 $('aside h2').prev('p').addClass("aside-subtitle");
 
-// This creates line numbers on code
-var pre = document.getElementsByTagName('pre'),
-    pl = pre.length;
-for (var i = 0; i < pl; i++) {
-    pre[i].innerHTML = '<span class="line-number"></span>' + pre[i].innerHTML + '<span class="cl"></span>';
-    var num = (pre[i].innerHTML.split(/\n/).length - 1);
-    for (var j = 0; j < num; j++) {
-        var line_num = pre[i].getElementsByTagName('span')[0];
-        line_num.innerHTML += '<span>' + (j + 1) + '</span>';
-    }
-}
-
 //This gives us a sense of what the active page is and will hide sections of the others
 var path = window.location.pathname;
 var page = path.split("/").pop();
