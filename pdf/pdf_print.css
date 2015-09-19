@@ -8,10 +8,10 @@
 	-ah-printer-marks-line-color: rgb-icc(#Grayscale, 0);
 }
 @page :left {
-  margin-left: 0.625in !important;
+  margin-left: 0.925in !important;
 }
 @page :right {
-  margin-right: 0.625in !important;
+  margin-right: 0.925in !important;
 }
 /* Inherit link styling */
 a,
