@@ -7,7 +7,12 @@
 	marks: crop;
 	-ah-printer-marks-line-color: rgb-icc(#Grayscale, 0);
 }
-
+@page :left {
+  margin-left: 0.625in !important;
+}
+@page :right {
+  margin-right: 0.625in !important;
+}
 /* Inherit link styling */
 a,
 a:link,
