@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 @page { /* defining overall trim size and page layout */
-  ssize: 7in 9.1875in; /* width, height */
+  size: 7in 9.1875in; /* width, height */
   margin-top: 0.75in; /* white space around the page */
   margin-bottom: 0.75in;
   @sidenote {
