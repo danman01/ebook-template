@@ -960,7 +960,7 @@ aside[data-type="sidebar"] { /* sidebar containers */
   background-color: cmyk(0%,0%,0%,15%);
   margin: 0.25in -1.625in;
   padding: 0.25in 1.625in;
-  width: 4.375in;
+  /* width: 4.375in; removing this so asides get same width as rest of text */
   clear: both;
 }
 

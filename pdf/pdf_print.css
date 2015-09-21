@@ -3,6 +3,7 @@
 /* Set bleed/crop marks */
 @page {
     /*size: 6in 9in; Commenting out as this causes the page to be too narrow. Now asides and text are the same width */
+    size: 6in 9in;
     bleed: 9pt;
     marks: crop;
     -ah-printer-marks-line-color: rgb-icc(#Grayscale, 0);
