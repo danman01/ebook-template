@@ -122,7 +122,7 @@ body {
 /* general inlines */
 
 a {
-  color: cmyk(0%,0%,0%,80%);
+  color: #137fbc; /*cmyk(0%,0%,0%,80%);*/
   font-weight: bold;
   text-decoration: none;
 }
@@ -220,6 +220,26 @@ section[data-type="dedication"] {
   text-align: center;
   padding-top: 96pt;
 }
+@page div section[data-type="dedication"] {
+  page-break-after: always;
+  font-style: italic;
+  padding-top: 0px
+}
+section[data-type="dedication"] > p {
+  font-size: 8pt
+}
+section[data-type="dedication"] > p > img {
+  float: right;
+  margin: 7px 10px 5px 10px;
+  overflow: auto;
+  border-style: ridge;
+  border-width: 7px;
+  width: 150px;
+  height: 100%;
+}
+
+
+
 
 /* -------------------------------------------------------------- */
 /* --------------------------- Praise ----------------------------*/
@@ -842,23 +862,29 @@ figure {
   width: 4.375in;
   text-align: center; /* in AH Land, this is how you center an img in a block */
   overflow: auto;
+  page-break-inside: avoid;
 }
 
 figure figcaption {
   display: block;
-  -ah-float: outside page; 
   clear: both;
-  margin-left: -1.25in;
-  margin-right: -1.25in;
-  width: 1in;
   text-align: left;
   font-family: Merriweather, serif, ArialUnicodeMS;
   font-style: italic;
   font-size: 7.5pt;
   line-height: 10pt;
   hyphens: none;
+  -ah-float:none;
+  margin-left: 0px !important;
+  margin-right:0px !important;
+  width: 3in !important;
+  margin-bottom: 1pt;
 }
 
+figure figcaption:before {
+  font-size: 8pt;
+  margin-bottom: 1pt;
+}
 figcaption:before {
   font-family: SourceSansPro-Black, sans-serif, ArialUnicodeMS;
   font-style: normal;
@@ -1045,6 +1071,21 @@ code { font-size: 107%; }
 
 pre code { font-size: inherit; }
 
+pre, code {
+  page-break-inside: avoid;
+}
+pre, aside pre {
+    display: block;
+    color: #fff;
+    background-color: #333;
+    overflow: auto;
+    margin: 0 0 1em;
+    padding: .5em 1em;
+    white-space:pre-wrap;
+}
+code, aside code { color: #fff; 
+white-space:pre-wrap;
+}
 div[data-type="example"] h5 {
   margin-bottom: 5pt;
   page-break-after: avoid;
@@ -1214,6 +1255,7 @@ ul li, ol li {
   font-family: SourceSansPro, ArialUnicodeMS;
   font-size: 9.5pt;
   margin-top: 3pt;
+  line-height: 14pt;
 }
 
 dl { /* definition lists */
