@@ -22,3 +22,36 @@ a:active {
 
 /* remove links in parens */
 span.print_url_in_parens { display: none }
+
+/* decreasing margins by .7 in */
+@page :left {
+  margin-left: 0.9in;
+  @bottom-left-corner {
+    margin-left: 1.1in;
+  }
+  @top-left {
+    margin-left: -1.375in;
+  }
+  @sidenote { margin-left: -1.975in; }
+}
+@page :right {
+  margin-right: 0.9in;
+  @bottom-right-corner {
+   margin-right: -0.350in;
+ }
+ @top-right {
+  margin-right: -1.375in;
+ }
+ @sidenote { margin-right: -1.975in; }
+}
+
+figure {
+  width: 100%;
+}
+
+/* decreasing figure margins by .7 in */
+figure img {
+  width: 4.0725in;
+}
+
+
