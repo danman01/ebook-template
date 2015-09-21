@@ -19,3 +19,6 @@ a:active {
     text-decoration: inherit;
     font-weight: inherit;
 }
+
+/* remove links in parens */
+span.print_url_in_parens { display: none }
