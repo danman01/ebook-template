@@ -346,8 +346,8 @@ nav[data-type="toc"] > h1 { /* table of contents heading */
   font-family: Merriweather, serif, ArialUnicodeMS;
   font-size: 16pt;
   line-height: 16pt;
-  margin-top: 37pt;
-  margin-bottom: 37pt;
+  margin-top: 50pt;
+  margin-bottom: 50pt;
   text-align: right;
 }
 
