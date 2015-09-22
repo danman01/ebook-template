@@ -27,22 +27,22 @@ span.print_url_in_parens { display: none }
 @page :left {
   margin-left: 0.9in;
   @bottom-left-corner {
-    margin-left: 1.1in;
+    mmargin-left: 1.1in;
   }
   @top-left {
-    margin-left: -1.375in;
+    mmargin-left: -1.375in;
   }
-  @sidenote { margin-left: -1.975in; }
+  @sidenote { mmargin-left: -1.975in; }
 }
 @page :right {
   margin-right: 0.9in;
   @bottom-right-corner {
-   margin-right: -0.350in;
+   mmargin-right: -0.350in;
  }
  @top-right {
-  margin-right: -1.375in;
+  mmargin-right: -1.375in;
  }
- @sidenote { margin-right: -1.975in; }
+ @sidenote { mmargin-right: -1.975in; }
 }
 
 figure {
