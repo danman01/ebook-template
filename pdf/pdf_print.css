@@ -30,7 +30,7 @@ span.print_url_in_parens { display: none }
     margin-left: 0.0in;
   }
   @top-left {
-    margin-left: 0.375in;
+    margin-left: -0.375in;
   }
 }
 @page :right {
@@ -39,7 +39,7 @@ span.print_url_in_parens { display: none }
    margin-right: 0.0in;
  }
  @top-right {
-  margin-right: -0.675in;
+  margin-right: -1.175in;
  }
 }
 
