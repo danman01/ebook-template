@@ -50,8 +50,9 @@ figure {
 }
 
 /* decreasing figure margins by .7 in */
-figure img {
+figure:not([data-type="cover"]) img {
   width: 4.0725in;
+  margin: 0 auto;
 }
 
 
