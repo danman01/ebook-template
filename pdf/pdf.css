@@ -36,43 +36,43 @@ body[data-type="book"] > figure[data-type="cover"] + section {
 }
 
 @page :left {
-  margin-left: 0.9in;
+  margin-left: 1.625in;
   margin-right: 1in;
   @bottom-left-corner {
     font-family: SourceSansPro, sans-serif, ArialUnicodeMS;
     font-size: 9pt;
     text-align: left;
-    margin-left: 1.1in; /* was .375 */
+    margin-left: 0.375in; 
     margin-top: 5pt;
   }
   @top-left {
     font-family: SourceSansPro, sans-serif, ArialUnicodeMS;
     font-size: 8pt;
     text-align: left;
-    margin-left: -1.375in; /* was -0.65in; */
+    margin-left: 0.375in;
     margin-top: 6pt;
   }
-  @sidenote { margin-left: -1.975in; } /* was -1.25in; */ 
+  @sidenote { margin-left: -1.25in; } 
 }
 
 @page :right {
-  margin-right: 0.9in;
+  margin-right: 1.625in;
   margin-left: 1in;
   @bottom-right-corner {
     font-family: SourceSansPro, sans-serif, ArialUnicodeMS;
     font-size: 9pt;
     text-align: right;
     margin-top: 5pt;
-    margin-right: -0.350in; /* was 0.375 */
+    margin-right: 0.375in; 
   }
   @top-right {
     font-family: SourceSansPro, sans-serif, ArialUnicodeMS;
     font-size: 8pt;
     text-align: right;
-    margin-right: -1.375in;
+    margin-right: -0.65in;
     margin-top: 6pt;
   }
-  @sidenote { margin-right: -1.975in; } 
+  @sidenote { margin-right: -1.25in; } 
 }
 
 @page :blank { /* defining a truly blank master page */
