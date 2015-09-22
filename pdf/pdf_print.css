@@ -53,4 +53,7 @@ figure:not([data-type="cover"]) img {
   margin: 0 auto;
 }
 
-
+th, td {
+  padding: 2.5pt 0.05in 2.5pt 0.05in;
+  font-size: 6.5pt !important;
+}
