@@ -86,8 +86,6 @@ body[data-type="book"] > figure[data-type="cover"] + section {
 /* ------------------------ General Blocks ---------------------- */
 /* -------------------------------------------------------------- */
 li > p, dd p,
-section[data-type="titlepage"] p,
-section[data-type="copyright-page"] p,
 p[data-type="author"], p.author,
 section[data-type="preface"] > h1 + p, 
 section[data-type="foreword"] > h1 + p,
@@ -100,6 +98,11 @@ section[data-type="sect3"] > h3 + p,
 h1 + p, h2 + p, h3 + P { 
   text-indent: 0.167in; /* first paragraph following a heading has no indent */
 }
+section[data-type="titlepage"] p,
+section[data-type="copyright-page"] p {
+  text-indent: 0in; /* don't indent these pages */
+}
+
 
 p, dd { /* general text styles */
   font-family: 'SourceSansPro', sans-serif, 'ArialUnicodeMS';
