@@ -98,7 +98,7 @@ section[data-type="sect1"] > h1 + p,
 section[data-type="sect2"] > h2 + p,
 section[data-type="sect3"] > h3 + p,
 h1 + p, h2 + p, h3 + P { 
-  text-indent: 0; /* first paragraph following a heading has no indent */
+  text-indent: 0.167in; /* first paragraph following a heading has no indent */
 }
 
 p, dd { /* general text styles */
