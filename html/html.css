@@ -1507,4 +1507,8 @@ section[data-type="dedication"] > p > img {
 	border-style: ridge;
 	border-width: 7px;
 }
-
+/* Code block run buttons */
+.thebe_controls button[data-action="run"] {
+  border: none;
+  background-color: #1995DC;
+}
