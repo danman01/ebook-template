@@ -1,30 +1,24 @@
-// define functions in global scope
-var navTop; var setCookie; var getCookie;
-
-// give control to $
-jQuery( document ).ready(function( $ ) {
-
 //This makes sure sidebar menu is correct height from top of document
-  navTop = function () {
-    $('nav').css("top", ($('header').height() + 60))
-  }
+function navTop() {
+  $('nav').css("top", ($('header').height() + 60))
+}
 
-  //functions for manipulating cookies
-  setCookie = function (cname, cvalue, exdays) {
-    var d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    var expires = "expires="+d.toUTCString();
-    document.cookie = cname + "=" + cvalue + "; " + expires;
+//functions for manipulating cookies
+function setCookie(cname, cvalue, exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  var expires = "expires="+d.toUTCString();
+  document.cookie = cname + "=" + cvalue + "; " + expires;
+}
+function getCookie(cname) {
+  var name = cname + "=";
+  var ca = document.cookie.split(';');
+  for(var i=0; i<ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0)==' ') c = c.substring(1);
+    if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
   }
-  getCookie = function (cname) {
-    var name = cname + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0; i<ca.length; i++) {
-      var c = ca[i];
-      while (c.charAt(0)==' ') c = c.substring(1);
-      if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
-    }
-    return "";
-  }
+  return "";
+}
 
-});
+

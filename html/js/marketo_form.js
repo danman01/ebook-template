@@ -35,18 +35,28 @@ jQuery( document ).ready(function( $ ) {
 
         marketo_lightbox.show();
 
+        $(".mktoModalMain form").submit(function(){
+          var rfDisplay = setInterval(function(){
+            if($("#RFDisplayFrame").length > 0 && $("#RFDisplayFrame").is(":visible")){
+              $("#RFDisplayFrame").css("z-index",'10002') 
+              clearInterval(rfDisplay);
+            }
+            if ($(".mktoModalMain form").length == 0) {
+              clearInterval(rfDisplay);
+            }
+          }, 500);
+        });
+
         // On Success:
         form.onSuccess(function(values, followUpUrl){
 
           // track the conversion in GTM:
           dataLayer.push({'event':'Conversion'});
           var events = dataLayer.map(function(obj){return obj.event})
-          console.log("data layer events:" + events.toString());
 
           // Track success in facebook, first waiting 5 secs:
           setTimeout(function(){
             window._fbq.push(['track', '6026805122947', {'value':'0.00','currency':'USD'}]);
-            console.log("fbq push triggered");
           }, 5000);
 
           setCookie("signedup", "yes", 999);
@@ -56,6 +66,11 @@ jQuery( document ).ready(function( $ ) {
           // or...$('.mktoModalClose').click(); ?
           marketo_lightbox.modalCloseClicked();
 
+          // close the 'SmartForm' that can't close itself
+          if ($("#RFLoadingFrame").length > 0) {
+            $("#RFLoadingFrame").remove();
+            $("#RFBlockFrame").remove();
+          }
           //return false to prevent the submission handler from taking the lead to the follow up url.
           return false;
         });
