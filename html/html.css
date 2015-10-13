@@ -750,7 +750,7 @@ figure {
     padding: 0;
     display: block;
     page-break-inside: avoid;
-    max-width: 600px!important;
+    max-width: 600px;
     margin: 0 auto
 }
 figure img {
@@ -1046,7 +1046,6 @@ ol li {
 }
 figure {
     background-color: #33333!important;
-    max-width: 100%
 }
 figure img {
     border: 0
@@ -1423,6 +1422,11 @@ section[data-type="chapter"] section {
     clear: both;
     overflow: hidden
 }
+div.navigation {
+  margin-top: 20px;
+  overflow: auto;
+  margin-bottom: 10px;
+}
 div.navigation ul {
     list-style-type: none
 }
@@ -1447,9 +1451,6 @@ div.navigation ul li a::after {
 }
 div.navigation ul li:last-child {
     float: right
-}
-section[data-type="chapter"] img {
-    max-width: 700px
 }
 nav ol li ol {
     list-style-type: none;
