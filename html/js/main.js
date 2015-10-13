@@ -11,6 +11,8 @@ $(window).on( "ready scroll", function() {
   }
 });
 
+(function(){
+
 $( "nav > ol > li > a" ).each(function() {
   var z = $(this).attr("href");
   var xdf = z.match(/[1-9]+/);
@@ -99,3 +101,4 @@ toc.bind('clickoutside', function (event) {
     $("#menu-button").click();
   }
 });
+})();
