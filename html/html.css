@@ -76,11 +76,12 @@ section[data-type="copyright-page"] p {
     text-indent: 0
 }
 nav[data-type="toc"] ol li[data-type="chapter"] {
+  width: 100%;
   margin-top: 10px;
 }
 
 nav[data-type="toc"] ol li a, nav[data-type="toc"] ol>li, nav[data-type="toc"] ol li {
-  font-size: 1em;
+  font-size: .95em;
 }
 nav[data-type="toc"] a {
     font-style: normal
@@ -426,12 +427,8 @@ div.navbar p a {
 nav ol li.not-active ol {
     display: none
 }
-nav[data-type="toc"] ol li a {
-    font-size: 15px;
-}
 nav[data-type="toc"] ol>li {
     font-weight: 400;
-    font-size: 15px;
 }
 nav[data-type="toc"]>ol>li::before {
     display: none!important
@@ -444,7 +441,7 @@ nav[data-type="toc"] ol li ol li a {
     font-weight: 300
 }
 nav[data-type="toc"]>ol>li a {
-    font-weight: 600
+    font-weight: 400
 }
 nav ol li ol {
     margin-top: 0
@@ -570,7 +567,6 @@ nav[data-type="toc"] li {
 nav[data-type="toc"] li[data-type="chapter"],
 nav[data-type="toc"] li[data-type="part"],
 nav[data-type="toc"] li[data-type="appendix"] {
-    font-size: 1em;
     line-height: 120%;
     margin-left: 0;
     text-indent: 0
@@ -1306,10 +1302,9 @@ nav ol li ul {
 }
 nav ol {
     position: absolute;
-    width: 310px;
-    margin: 25px 15px 15px 25px;
+    width: 370px;
+    margin: 25px 15px 15px 20px;
     color: #fff;
-    font-weight: 600;
     list-style-type: none;
     padding-right: 89px
 }
@@ -1414,7 +1409,7 @@ sidebar ul {
     margin: 0;
     padding: 0
 }
-section[data-type="chapter"] {
+section[data-type="chapter"], section[data-type="sect1"], section[data-type="sect2"] {
     max-width: 1000px;
     margin: 0 auto
 }
