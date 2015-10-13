@@ -22,10 +22,11 @@ $( "nav > ol > li > a" ).each(function() {
   else {
     var finalNumber = parseFloat(xdf).toFixed(1);
   }
-if (finalNumber != null && isNaN(finalNumber) == false) {
-  $(this).parent('li').attr("chapter-number", finalNumber);
-  $(this).parent('li').prepend(finalNumber + ": ");
-}
+
+  if (finalNumber != null && isNaN(finalNumber) == false) {
+    $(this).parent('li').attr("chapter-number", finalNumber);
+    $(this).parent('li').prepend(finalNumber + ": ");
+  }
 
 });
 
@@ -35,15 +36,15 @@ $('.dynamic-text section a').attr("target", "_blank");
 //This gives us smooth scrolling between anchors
 $('a[href*=#]:not([href=#])').click(function() {
   if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-  var target = $(this.hash);
-target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-if (target.length) {
-  $('html,body').animate({
-    scrollTop: target.offset().top
-  }, 1000);
-  return false;
-}
-}
+    var target = $(this.hash);
+  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+    if (target.length) {
+      $('html,body').animate({
+        scrollTop: target.offset().top
+      }, 1000);
+      return false;
+    }
+  }
 });
 
 //This labels p tags in asides, in case people use those instad of h3 or something else b4 the h2
@@ -91,4 +92,10 @@ $('#menu-button').sidr({
 $('aside').prepend("<div></div>");
 $('aside div').addClass("blue-thing");
 
-})();
+// hide TOC when clicked outside of TOC; using external js library, ba-outside-events
+var toc = $('nav[data-type="toc"]');
+toc.bind('clickoutside', function (event) {
+  if(toc.is(":visible")){
+    $("#menu-button").click();
+  }
+});
