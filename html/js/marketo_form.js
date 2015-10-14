@@ -28,17 +28,25 @@ jQuery( document ).ready(function( $ ) {
     setTimeout(function() {
       //Mktoforms is an object we're grabbing from the script that's included from Marketo. Now this method is loadin' it
       MktoForms2.loadForm("//app-sjl.marketo.com", "142-FNO-891", 1765, function(form) {
+
+        // Global, incase we need it elsewhere
         marketo_lightbox = MktoForms2.lightbox(form);
 
-        marketo_submit_btn = $(".mktoForm .mktoButtonWrap.mktoCleanGray .mktoButton");
-        marketo_submit_btn.text("Read the Ebook");
+        // Change submit btn text and add icon. Maybe there's a way to configure this on the Marketo side?
+        var mkto_button = $(".mktoForm .mktoButtonWrap.mktoCleanGray .mktoButton");
+        mkto_button.text("Read the Ebook");
+        mkto_button.append("<i></i>");
 
         marketo_lightbox.show();
 
+        // On form submit, we then check every interval for the RFDisplayFrame.
+        // If ReachForce is on the page, we give it a higher zindex than marketo lightbox
         $(".mktoModalMain form").submit(function(){
           var rfDisplay = setInterval(function(){
             if($("#RFDisplayFrame").length > 0 && $("#RFDisplayFrame").is(":visible")){
-              $("#RFDisplayFrame").css("z-index",'10002') 
+              var mkto_modal_zindex = $(".mktoModal .mktoModalMask").css("z-index");
+              var desired_zindex = parseInt(mkto_modal_zindex) + 10;
+              $("#RFDisplayFrame").css("z-index", desired_zindex);
               clearInterval(rfDisplay);
             }
             if ($(".mktoModalMain form").length == 0) {
@@ -51,19 +59,15 @@ jQuery( document ).ready(function( $ ) {
         form.onSuccess(function(values, followUpUrl){
 
           // track the conversion in GTM:
-          dataLayer.push({'event':'Conversion'});
-          var events = dataLayer.map(function(obj){return obj.event})
-
-          // Track success in facebook, first waiting 5 secs:
-          setTimeout(function(){
-            window._fbq.push(['track', '6026805122947', {'value':'0.00','currency':'USD'}]);
-          }, 5000);
+          dataLayer.push({'event':'Conversion Popup'});
 
           setCookie("signedup", "yes", 999);
 
           // Get the form's jQuery element and hide it...this turns out to not close the entire modal box and our appended text.
           // form.getFormElem().hide();
           // or...$('.mktoModalClose').click(); ?
+
+          // this one does the trick:
           marketo_lightbox.modalCloseClicked();
 
           // close the 'SmartForm' that can't close itself

@@ -42,7 +42,10 @@
   font-weight: normal;
 }
 
-.mktoForm .mktoButtonWrap.mktoCleanGray button.mktoButton:after {
-  /*content: url("/sites/all/themes/maprcom/images/arrow_red_16x16.png");*/
-  content: " \21FE";
+.mktoButton i {
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  background: url(https://www.mapr.com/sites/all/themes/maprcom/images/sprite.png) no-repeat -210px -10px;
+  margin: 0px 0px -3px 5px;
 }
