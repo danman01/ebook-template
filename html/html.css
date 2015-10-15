@@ -867,33 +867,7 @@ div.navbar p a {
     text-decoration: none;
     color: #999
 }
-@media screen and (min-width: 480px) and (max-width: 1024px) {
-    body {
-        width: 100%;
-        padding: 80px 20px 20px
-    }
-}
-@media screen and (max-width: 480px) {
-    body {
-        width: 100%;
-        padding: 10px
-    }
-    div.navbar {
-        position: relative;
-        padding: 10px 20px;
-        border-bottom: 2px solid #e8e8e8;
-        box-shadow: 0 0 0 #f0f0f0;
-        text-align: center
-    }
-    div.navbar h1 {
-        float: none;
-        margin-bottom: 10px
-    }
-    div.navbar p {
-        float: none;
-        text-indent: 0
-    }
-}
+
 *,
 :before,
 :after {
