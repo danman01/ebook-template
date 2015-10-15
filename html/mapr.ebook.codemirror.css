@@ -302,6 +302,13 @@ span.CodeMirror-selectedtext { background: none; }
 .thebe_wrap { max-width: 800px !important; box-sizing: padding-box; margin: auto; margin-bottom: 4.5em !important }
 .thebe_controls { position: relative; bottom: 0; text-align: right; z-index: 100; pointer-events: none; margin: -3.1875rem 0 0; margin-bottom: -3em !important; }
 .thebe_controls button { pointer-events: initial; margin: .45rem .625rem .625rem 0; background-color: #a1a1a1; color: #fff; outline: 0; padding: .5rem 1.25rem .5rem; border-style: outset; cursor: pointer; }
+/*
+div.thebe_controls button {
+  border: none;
+  background-color: #1995DC;
+}
+*/
+
 div.input_prompt { display: none; }
 .code_cell .thebe_controls { position: relative; bottom: 0; text-align: right; z-index: 100; pointer-events: none; margin: -3.1875rem 0 0; }
 .code_cell .output_wrapper .output_prompt { display: none; }

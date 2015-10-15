@@ -1,3 +1,5 @@
+/* No THEBE or codemirror CSS goes in the file */
+
 .header-inside a {
     text-decoration: none;
 }
@@ -1478,8 +1480,4 @@ section[data-type="dedication"] > p > img {
 	border-style: ridge;
 	border-width: 7px;
 }
-/* Code block run buttons */
-div.thebe_controls button {
-  border: none;
-  background-color: #1995DC;
-}
+
