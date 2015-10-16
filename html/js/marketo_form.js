@@ -26,6 +26,11 @@ jQuery( document ).ready(function( $ ) {
 
     //And the form loads after a set amount of time to freak people out
     setTimeout(function() {
+
+      $(window).on("scroll",function(){
+        positionContent(); // defined in forms2.js, originally from external source
+     })
+
       //Mktoforms is an object we're grabbing from the script that's included from Marketo. Now this method is loadin' it
       MktoForms2.loadForm("//app-sjl.marketo.com", "142-FNO-891", 1765, function(form) {
 
