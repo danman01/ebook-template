@@ -85,7 +85,7 @@ jQuery( document ).ready(function( $ ) {
         });
       });
 
-    }, 15000); //Amount of time in Milliseconds till we see the popup
+    }, 7000); //Amount of time in Milliseconds till we see the popup
   }
 });
 

@@ -1,33 +1,68 @@
 /* Mobile */
-@media screen and (max-device-width: 480px) {
-  footer {
-    font-size: 12px;
-  }
-  body {
+/* 
+ * iPhone 6+ max-device-width is 736 
+ * Galexy and HTC device-width is 640 
+ * 
+*/ 
+@media screen and (max-device-width: 736px) {
+  nav[data-type="toc"] {
     width: 100%;
-    padding: 10px
-  }
-  div.navbar {
-    position: relative;
-    padding: 10px 20px;
-    border-bottom: 2px solid #e8e8e8;
-    box-shadow: 0 0 0 #f0f0f0;
-    text-align: center
-  }
-  div.navbar h1 {
-    float: none;
-    margin-bottom: 10px
-  }
-  div.navbar p {
-    float: none;
-    text-indent: 0
-  }
+}
+nav[data-type="toc"] ol {
+  width: 100%;
+  font-size: 1em;
+}
+div nav[data-type="toc"] ol li {
+  font-size: 2em;
+}
+div nav[data-type="toc"] ol li ol li a{
+  font-size:34px;
+}
+div nav ol li ol li a {
+  line-height: 38px !important;
+}
+footer {
+  font-size: 12px;
+}
+body {
+  width: 100%;
+  padding: 10px
+}
+div.navbar {
+  position: relative;
+  padding: 10px 20px;
+  border-bottom: 2px solid #e8e8e8;
+  box-shadow: 0 0 0 #f0f0f0;
+  text-align: center
+}
+div.navbar h1 {
+  float: none;
+  margin-bottom: 10px
+}
+div.navbar p {
+  float: none;
+  text-indent: 0
+}
 
-  .special-custom-popup-blurb h3 {
-    font-weight: 400;
-  }
-  .special-custom-popup-blurb p {
-    font-weight: 400;
-  }
+.special-custom-popup-blurb h3 {
+  font-weight: 400;
+}
+.special-custom-popup-blurb p {
+  font-weight: 400;
+}
+}
+@media screen and (max-device-width: 736px) and (orientation: landscape) {
+  nav[data-type="toc"] {
+    width: 100%;
+}
+div nav[data-type="toc"] ol li {
+  font-size: .95em;
+}
+div nav[data-type="toc"] ol li ol li a{
+  font-size:16px;
+}
+div nav ol li ol li a {
+  line-height: 18px !important;
+}
 }
 /* End Mobile */
