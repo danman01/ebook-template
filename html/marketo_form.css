@@ -29,6 +29,7 @@
 }
 
 .mktoModal div.mktoModalClose{
+  display: none;
   width: 22px;
   height: 22px;
 }
