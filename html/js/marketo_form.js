@@ -1,20 +1,16 @@
 // Marketo lightbox
 // things to note:
-// does not appear when signedup cookie is set to 'yes'
+// does not appear when visited cookie is set to 'yes'
 
 // Function begins at load
 // return jQuery control to $
 jQuery( document ).ready(function( $ ) {
+
   //Declares the cookie as JS var
-  var username = getCookie("visited");
-  var signedup = getCookie('signedup');
+  var visited = getCookie("visited");
 
   //If you haven't signed up for the form on the page...
-  if (signedup != "yes") {
-
-    if (username == "") {
-      setCookie("visited", "yes", 999);
-    }
+  if (visited != "yes") {
 
     //On form render, let's add some nice little blurbs
 
@@ -66,7 +62,7 @@ jQuery( document ).ready(function( $ ) {
           // track the conversion in GTM:
           dataLayer.push({'event':'Conversion Popup'});
 
-          setCookie("signedup", "yes", 999);
+          setCookie("visited", "yes", 999);
 
           // Get the form's jQuery element and hide it...this turns out to not close the entire modal box and our appended text.
           // form.getFormElem().hide();
