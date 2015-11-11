@@ -6,6 +6,7 @@ function navTop() {
 //functions for manipulating cookies
 function setCookie(cname, cvalue, exdays) {
   var d = new Date();
+  var exdays = exdays || 999;
   d.setTime(d.getTime() + (exdays*24*60*60*1000));
   var expires = "expires="+d.toUTCString();
   document.cookie = cname + "=" + cvalue + "; " + expires;
