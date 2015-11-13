@@ -1477,7 +1477,7 @@ section[data-type="dedication"] > p > img {
     top: 1px
 }
 .download-dropdown > ul > li:hover > a:before {
-  background-color: #1995dc;
+  content:url(/images/download_blue_16x16.png);
   color: #1995dc;
 }
 .download-dropdown ul li a:hover, .download-dropdown ul li:hover, .download-dropdown ul:hover {
