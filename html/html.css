@@ -1469,15 +1469,18 @@ section[data-type="dedication"] > p > img {
   font-weight: 400;
 }
 .download-dropdown > ul > li > a:before {
-  content:url(https://www.mapr.com/sites/all/themes/maprcom/images/download_white_16x16.png);
-  height: 22px;
+  content: '';
+  background: transparent url(https://www.mapr.com/sites/all/themes/maprcom/images/download_white_16x16.png) no-repeat;
+  height: 14px;
   width: 22px;
-  position: relative;
-  right: 8px;
-  top: 1px
+  display: inline-block;
 }
 .download-dropdown > ul > li:hover > a:before {
-  content:url(https://www.mapr.com/sites/all/themes/maprcom/images/download_blue_16x16.png);
+  content: '';
+  height: 14px;
+  width: 22px;
+  display: inline-block;
+  background: transparent url(https://www.mapr.com/sites/all/themes/maprcom/images/download_blue_16x16.png) no-repeat;
   color: #1995dc;
 }
 .download-dropdown ul li a:hover, .download-dropdown ul li:hover, .download-dropdown ul:hover {
