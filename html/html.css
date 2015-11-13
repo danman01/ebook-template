@@ -1454,4 +1454,105 @@ section[data-type="dedication"] > p > img {
 	border-style: ridge;
 	border-width: 7px;
 }
+.download-dropdown {
+  display:inline-block;
+  float: right;
+  margin-top: 13px;
+}
+.download-dropdown >ul >li {
+  width: 120px
+}
+.download-dropdown > ul > li > a
+{
+  color: white;
+  margin-bottom: 0px;
+  font-weight: 400;
+}
+.download-dropdown > ul > li > a:before {
+    content:url(/images/download_white_16x16.png);
+    height: 22px;
+    width: 22px;
+    position: relative;
+    right: 8px;
+    top: 1px
+}
+.download-dropdown > ul > li:hover > a:before {
+  background-color: #1995dc;
+  color: #1995dc;
+}
+.download-dropdown ul li a:hover, .download-dropdown ul li:hover, .download-dropdown ul:hover {
+  color: #1995dc;
+}
 
+.download-dropdown ul
+{
+  list-style:none;
+  position:relative;
+  float:left;
+  margin:0;
+  padding:0
+}
+
+.download-dropdown ul a
+{
+  display:block;
+  color:white;
+  text-decoration:none;
+  text-align: center;
+  font-weight:400;
+  font-size:14px;
+  line-height:32px;
+  padding:0 15px;
+  font-family:"HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif
+}
+
+.download-dropdown ul li
+{
+  position:relative;
+  float:left;
+  margin:0 !important;
+  padding:0
+}
+
+.download-dropdown ul li.current-menu-item
+{
+  background:#ddd
+}
+
+.download-dropdown > ul > li:hover, .download-dropdown > ul >li:hover > a
+{
+  background:#fff;
+  color: #1995dc;
+}
+
+.download-dropdown ul ul
+{
+  display:none;
+  position:absolute;
+  top:100%;
+  left:0;
+  background:#333;
+  padding:0
+}
+
+.download-dropdown ul ul li
+{
+  float:none;
+  width:120px
+}
+
+.download-dropdown ul ul a
+{
+  line-height:35px;
+  padding:0px;
+  margin:0px;
+}
+.download-dropdown ul ul ul
+{
+  top:0;
+  left:100%
+}
+.download-dropdown ul li:hover > ul
+{
+  display:block;
+}
