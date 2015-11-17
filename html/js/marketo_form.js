@@ -1,18 +1,21 @@
-// Marketo lightbox
-// things to note:
-// does not appear when visited cookie is set to 'yes'
+// Marketo lightbox setup script
+//
+// Things to note:
+// - Depends on functions.js and forms2.js
+// - Popup does not appear when visited cookie is set to 'yes'
+// - dataLayer object can be configured below
+// - Time to wait for popup can be configured as the second argument to setTimeout()
+//
 
 // Function begins at load
 // return jQuery control to $
 jQuery( document ).ready(function( $ ) {
 
-  //Declares the cookie as JS var
   var visited = getCookie("visited");
 
-  //If you haven't signed up for the form on the page...
   if (visited != "yes") {
 
-    //On form render, let's add some nice little blurbs
+    // On form render, let's add some nice little blurbs
 
     MktoForms2.onFormRender(function(form) {
       $('.mktoModalMain').prepend(
@@ -20,7 +23,7 @@ jQuery( document ).ready(function( $ ) {
         );
     });
 
-    //And the form loads after a set amount of time to freak people out
+    // And the form loads after a set amount of time to freak people out
     setTimeout(function() {
 
       $(window).on("scroll",function(){
@@ -59,24 +62,19 @@ jQuery( document ).ready(function( $ ) {
         // On Success:
         form.onSuccess(function(values, followUpUrl){
 
-          // track the conversion in GTM:
+          // Track the conversion in GTM:
           dataLayer.push({'event':'Conversion Popup'});
 
           setCookie("visited", "yes", 999);
 
-          // Get the form's jQuery element and hide it...this turns out to not close the entire modal box and our appended text.
-          // form.getFormElem().hide();
-          // or...$('.mktoModalClose').click(); ?
-
-          // this one does the trick:
           marketo_lightbox.modalCloseClicked();
 
-          // close the 'SmartForm' that can't close itself
+          // Close the 'SmartForm' that can't close itself
           if ($("#RFLoadingFrame").length > 0) {
             $("#RFLoadingFrame").remove();
             $("#RFBlockFrame").remove();
           }
-          //return false to prevent the submission handler from taking the lead to the follow up url.
+          // Return false to prevent the submission handler from taking the lead to the follow up url.
           return false;
         });
       });
