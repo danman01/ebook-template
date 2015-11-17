@@ -1,9 +1,17 @@
+/* Reference [template-css-reference]
+ *
+ * #C60C30 - red
+ * #1995DC - blue
+ * button background image: https://www.mapr.com/sites/all/themes/maprcom/images/sprite.png
+ *
+ */
+
 .special-custom-popup-blurb {
   margin: -10px;
   text-align: center;
 }
 .special-custom-popup-blurb h3 {
-  background-color: #C60C30; /* mapr red */
+  background-color: #C60C30; 
   color: white;
   font-size: 30px;
   text-transform: uppercase;
@@ -13,7 +21,7 @@
   text-align: center;
 }
 .special-custom-popup-blurb p {
-  background-color: #1995DC; /* mapr blue */
+  background-color: #1995DC;
   color: white;
   font-size: 14px;
   padding: 6px;
@@ -37,7 +45,7 @@
 .mktoForm .mktoButtonWrap.mktoCleanGray button.mktoButton,
 .mktoForm .mktoButtonWrap.mktoCleanGray button.mktoButton:hover {
   background: none;
-  background-color: #C60C30; /* mapr red */
+  background-color: #C60C30;
   color: white;
   text-shadow: none;
   font-weight: normal;

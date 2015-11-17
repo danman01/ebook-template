@@ -1,4 +1,4 @@
-//This is required for the side menu to appear correctly: it emulates the late position:sticky attribute in a dumb way
+// This is required for the side menu to appear correctly: it emulates the late position:sticky attribute
 $(window).on( "ready scroll", function() {
   if ($(window).scrollTop() > ($('header').height() + 25)) {
     $('nav > ol').css("position", "fixed");
